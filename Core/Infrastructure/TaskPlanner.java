@@ -26,10 +26,11 @@ public class TaskPlanner {
         Task task = new Task();
         System.out.println("Введите название задачи");
 
-        task.setDescription(sc1.next());
+        task.setDescription(sc1.nextLine());
         System.out.println("Введите дату завершения задачи в формате dd/MM/yyyy");
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String temp = sc1.next();
+        String temp = sc1.nextLine();
         try {
             task.setDeadLine(simpleDateFormat.parse(temp));
         } catch (ParseException e) {
